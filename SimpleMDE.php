@@ -11,11 +11,11 @@
  */
 namespace tangniyuqi\simplemde;
 
+use yii\helpers\Json;
 use yii\helpers\Html;
 use yii\helpers\Inflector;
-use yii\helpers\Json;
-use yii\web\JsExpression;
 use yii\widgets\InputWidget;
+use yii\web\JsExpression;
 
 class SimpleMDE extends InputWidget
 {
@@ -25,6 +25,7 @@ class SimpleMDE extends InputWidget
      * @var array
      */
     public $mdeOptions = [];
+
     /**
      * ID of Textarea where editor will be placed
      * @var string
@@ -41,6 +42,7 @@ class SimpleMDE extends InputWidget
         if (empty($this->id)) {
             $this->id = $this->hasModel() ? Html::getInputId($this->model, $this->attribute) : $this->getId();
         }
+
         if (empty($this->mdeOptions['element'])) {
             $this->mdeOptions['element'] = new JsExpression('$("#' . $this->id . '")[0]');
         }
