@@ -18,7 +18,7 @@ class SimpleMDEAsset extends AssetBundle
     /**
      * @inheritdoc
      */
-    public $sourcePath = '@bower/easymde/dist';
+    //public $sourcePath = '@bower/easymde/dist';
 
     /**
      * @inheritdoc
@@ -40,4 +40,14 @@ class SimpleMDEAsset extends AssetBundle
     public $depends = [
         'yii\web\JqueryAsset',
     ];
+
+    /*
+     * @inheritdoc
+     */
+    public function init()
+    {
+        parent::init();
+
+        $this->sourcePath = dirname(__FILE__).DIRECTORY_SEPARATOR.'assets';
+    }
 }
