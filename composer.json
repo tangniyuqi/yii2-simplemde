@@ -1,7 +1,7 @@
 {
     "name": "tangniyuqi/yii2-simplemde",
     "version": "1.4.0",
-    "type": "yii2-extension",
+    "type": "yii2-widget",
     "description": "The simplemde markdown editor widget for the Yii framework",
     "keywords": ["yii2", "simplemde", "markdown", "editor"],
     "homepage": "https://github.com/tangniyuqi/yii2-simplemde",
